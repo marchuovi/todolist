@@ -1,9 +1,10 @@
+import React from 'react'
+import BtnAdd from './components/BtnAdd'
 
-function App() {
-  
+const App = () => {
   return (
-    <div className="App">
-hola caracola
+    <div>
+      <BtnAdd/>
     </div>
   )
 }
