@@ -1,26 +1,4 @@
 import fondo from "../assets/fondo.jpg"
-<<<<<<< HEAD
-import {CardActionArea,Card,CardMedia} from '@mui/material'
-
-const Header = () => {
-  return (
-     
-        <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image={fondo}
-          alt="fondo de pantalla"
-        />
-        {/* <CardContent>
-         
-        </CardContent> */}
-      </CardActionArea>
-    </Card>
-    
-
-=======
 import { CardMedia, Box, Typography } from '@mui/material'
 import ImputForm from "./ImputForm"
 
@@ -46,7 +24,6 @@ const Header = () => {
     </Box>
 
     </>
->>>>>>> inputForm
   )
 }
 
