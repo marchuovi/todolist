@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import CheckB from "./CheckB";
 import axios from "axios";
 import { Box } from "@mui/system";
 
-const NewList = (props) => {
+const NewList = () => {
   const url = "http://localhost:3000/tasks";
   const getData = async () => {
-    const response = axios.get(url);
+    const response = await axios.get(url);
     return response;
   };
 
@@ -16,20 +15,22 @@ const NewList = (props) => {
     getData().then((response) => {
       setList(response.data);
     });
-  }, [updateList]);
+  }, []);
   console.log(list);
   return (
-    <div>
-      {list.map((task, index) => (
-        <div
-          key={index}
-          task={task}
-          setUpdateList={setUpdateList}
-          updateList={updateList}
-        >
-        </div>
+    <Box sx={{backgroundColor:'red'}}>
+      {list.map((t, index) => (
+        <p key={index}>{t.task}</p>
+        // <div
+        //   key={index}
+        //   task={task}
+        //   setUpdateList={setUpdateList}
+        //   updateList={updateList}
+        // >
+          
+        // </div>
       ))}
-    </div>
+    </Box>
   );
 };
 
