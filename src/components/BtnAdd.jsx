@@ -4,7 +4,8 @@ import { Button } from '@mui/material'
 const BtnAdd = () => {
   return (
     <>
-        <Button variant="contained" sx={{backgroundColor:'#B4ACE7'}}>Add</Button>
+        <Button variant="contained" sx={{backgroundColor:'#B4ACE7', ':hover': {
+      bgcolor: '#9486ED'}}}>Add</Button>
     </>
   )
 }
