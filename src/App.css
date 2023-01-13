@@ -1,0 +1,70 @@
+:root{
+    --bg-grey: rgb(242, 243, 244, .8);
+    --border:#E7E5E5;
+    --inputlist:rgb(133, 111, 176, .6);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario{
+    position: relative;
+    top: 150px;
+    width: 80%;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+.input{
+   width: 70%;
+   height: 38px;
+   border-radius: 5px;
+   border: 1px solid var(--border);
+   background-color: var(--bg-grey);
+   color: black;
+   padding: 0 5%;
+   font-size: 1rem;
+}
+.lista{
+    min-height: 400px;
+    width: 80%;
+    position: fixed;
+    top: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-grey);
+    border-radius: 35px;
+    padding: 3%;
+}
+
+.inputList{
+    width: 60%;
+    height: 38px;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    background-color: var(--inputlist);
+    font-size: 1rem;
+    color: var(--border);
+    padding: 0 5%;
+ }
+
+ .tasklist{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2% 0;
+ }
+ .btnAll{
+    
+    top: auto;
+ }

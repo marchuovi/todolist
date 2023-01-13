@@ -1,17 +1,20 @@
-import React from 'react'
-import BtnAdd from './components/BtnAdd'
-import Header from './components/Header'
-import NewList from './components/NewList'
-import { Container } from '@mui/system'
+import React, { useState } from "react";
+import Header from "./components/Header";
+import ListTasks from "./components/ListTasks";
+import PostTask from "./components/PostTask";
+import BtnDeletAll from "./components/BtnDeletAll";
+import './App.css'
 
-const App = () => {
+export const App = () => {
+  const [updateTasks, setUpdate] = useState(false);
   return (
-    <Container sx={{display:'flex', direction:'row', zIndex:'2'}}>
-      {/* <BtnAdd/> */}
+    <div className="app">
       <Header />
-      <NewList />
-    </Container>
-  )
+      <PostTask className="input" setUpdate={setUpdate} updateTasks={updateTasks} />
+      <ListTasks setUpdate={setUpdate} updateTasks={updateTasks} />
+      <BtnDeletAll setUpdate={setUpdate} updateTasks={updateTasks} />
+    </div>
+  );
 }
 
-export default App
+export default App;
