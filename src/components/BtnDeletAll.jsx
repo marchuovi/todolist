@@ -3,14 +3,13 @@ import axios from "axios";
 import { Button } from '@mui/material'
 
 
-const BtnDeletAll = ({ task, setUpdate, updateTasks }) => {
+const BtnDeletAll = ({setUpdate, updateTasks }) => {
     const URL = "http://localhost:3000/tasks";
 
     const handleDeleteAll = async () => {
         const { data } = await axios.get(URL);
         for (const task of data) {
             await axios.delete(`${URL}/${task.id}`);
-            // setUpdate(!updateTasks);
         }
         setUpdate(!updateTasks);
     };

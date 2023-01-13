@@ -21,7 +21,7 @@ const ListTasks = ({ setUpdate, updateTasks }) => {
 
   return (
     <div className="lista">
-      {tasks.map((task, index) => (
+      {tasks.map((task) => (
         <Task
           key={task.id}
           task={task}

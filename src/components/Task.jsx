@@ -54,7 +54,7 @@ const Task = ({ task, setUpdate, updateTasks }) => {
           ':hover': {
             bgcolor: '#9486ED'
           }
-        }} >Edit</Button>
+        }} >Save</Button>
 
       <Button onClick={handleDelete} variant="contained"
         sx={{
